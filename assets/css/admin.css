@@ -1,0 +1,220 @@
+/* 
+ * TCL Türkel Kalibrasyon Erişim Sistemi
+ * Admin panel stil dosyası
+ */
+
+ :root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+}
+
+body {
+    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fc;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100vh;
+    z-index: 100;
+    padding-top: 56px; /* Navbar height */
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    background-color: #fff;
+}
+
+.sidebar .nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar .nav-link {
+    color: #5a5c69;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    position: relative;
+}
+
+.sidebar .nav-link:hover {
+    color: #4e73df;
+    background-color: rgba(78, 115, 223, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: #4e73df;
+    background-color: rgba(78, 115, 223, 0.1);
+    font-weight: 700;
+}
+
+.sidebar .sidebar-heading {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.sidebar-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+/* Navbar */
+.navbar-dark.bg-dark {
+    background-color: #3a3b45 !important;
+}
+
+/* Main content */
+main {
+    margin-left: 225px;
+    padding-top: 104px; /* Navbar height + Padding */
+}
+
+/* Kartlar */
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    border: none;
+    border-radius: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+}
+
+.card-header h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+/* İstatistik kartları */
+.border-left-primary {
+    border-left: 0.25rem solid var(--primary-color) !important;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid var(--success-color) !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid var(--info-color) !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid var(--warning-color) !important;
+}
+
+.border-left-danger {
+    border-left: 0.25rem solid var(--danger-color) !important;
+}
+
+.text-xs {
+    font-size: 0.7rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+/* Grafikler */
+.chart-area {
+    position: relative;
+    height: 320px;
+}
+
+.chart-pie {
+    position: relative;
+    height: 320px;
+}
+
+/* Tablolar */
+.datatable {
+    width: 100% !important;
+}
+
+.datatable thead th {
+    background-color: #f8f9fc;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.datatable tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+/* Form */
+.form-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.form-text {
+    font-size: 0.75rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #bac8f3;
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+/* Footer */
+.footer {
+    background-color: #3a3b45;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive Ayarları */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+    
+    main {
+        margin-left: 0;
+        padding-top: 16px;
+    }
+    
+    .chart-area, .chart-pie {
+        height: 250px;
+    }
+}
+
+/* Yazdırma stilleri */
+@media print {
+    .sidebar, .navbar, .footer, .no-print {
+        display: none !important;
+    }
+    
+    main {
+        margin-left: 0;
+        padding-top: 0;
+    }
+    
+    body {
+        background-color: #fff;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
