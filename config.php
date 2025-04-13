@@ -6,7 +6,7 @@ define('DB_PASSWORD', 'Berkay0100'); // Veritabanı şifrenizi buraya girin
 define('DB_NAME', 'kortekgsmdatalog_gsmarge');
 
 // Uygulama URL'si
-define('BASE_URL', 'http://localhost/public_html/calibration');
+define('BASE_URL', 'http://kortekgsmdatalogger.com.tr/calibration');
 
 // Dosya yükleme ayarları
 define('UPLOAD_DIR', 'uploads/');
